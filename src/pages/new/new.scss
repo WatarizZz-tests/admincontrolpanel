@@ -1,9 +1,16 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .new {
   width: 100%;
   display: flex;
 
   .newContainer {
     flex: 6;
+    width: 100%;
 
     .top,
     .bottom {
@@ -12,71 +19,188 @@
       padding: 10px;
       margin: 20px;
       display: flex;
+      flex-direction: column;
+      align-items: center;
 
       h1 {
-        color: lightgray;
+        color: rgb(128, 125, 125);
         font-size: 20px;
       }
 
-      .left {
-        flex: 1;
-        text-align: center;
 
-        img {
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content:space-evenly ;
+        width: 100% ;
+        
 
-      .right {
-        flex: 2;
-
-        form {
+        .left {
           display: flex;
-          flex-wrap: wrap;
-          gap: 30px;
-          justify-content: space-around;
-
-          .formInput {
-            width: 40%;
-
-            label {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-
-              .icon {
-                cursor: pointer;
-              }
-            }
-
-            input {
-              width: 100%;
-              padding: 5px;
-              border: none;
-              border-bottom: 1px solid gray;
-            }
+          flex-direction: column;
+          text-align: center;
+          textarea {
+            background-image: linear-gradient(#F1F1F1 50%, #F9F9F9 50%);
+            background-size: 100% 4rem;
+            border: 1px solid #CCC;
+            width: 350px;
+            height: 150px;
+            line-height: 2rem;
+            margin: 0 auto;
+            padding: 4px 8px;
+            font-size: 1.1rem;
+            color: black;
           }
-
-          button {
-            width: 150px;
-            padding: 10px;
-            border: none;
-            background-color: teal;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-
-            &:disabled{
-              background-color: rgba(3, 92, 92, 0.322);
-              cursor: not-allowed;
-            }
-          }
+  
+          
         }
+        .right {
+           
+            .formInput {
+              width: 100%;
+  
+              label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 2px;
+  
+                .icon {
+                  cursor: pointer;
+                }
+              }
+  
+              input {
+                width: 500px;
+                padding: 5px;
+                border: none;
+                border-bottom: 1px solid gray;
+              }
+            
+            }
+  
+            
+          }
+
+      } 
+
+      .Button1 {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        background-color: teal;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        top: 50%;
+       
+
+        
+      }
+      button:hover {
+        background-color: rgb(5, 94, 94);
+      }
+      .validation-message {
+        margin: 0.5rem 0;
+        color: green;
+        font-size: 0.9rem;
+      }
       }
     }
   }
-}
+
+  @media screen and (max-width: 1040px) {
+
+    .new {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    
+      .newContainer {
+        flex: 1;
+        width: 100%; 
+        }
+      }    
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .new {
+      .newContainer {
+        flex: 1;
+        width: 100%;
+        .top,
+        .bottom {
+          form {
+            .right {
+               
+                .formInput {
+                  width: 100%;
+                  input {
+                    width: 330px; 
+                  }
+                }  
+              }
+          } 
+          }
+        }
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+    .new {
+      .newContainer {
+        flex: 1;
+        width: 100%;
+        .top,
+        .bottom {
+          form {
+            .right {
+               
+                .formInput {
+                  width: 100%;
+                  input {
+                    width: 330px; 
+                  }
+                }  
+              }
+          } 
+          }
+        }
+      }
+  }
+
+  @media screen and (max-width: 415px) {
+    .new {
+      .newContainer {
+        .top,
+        .bottom {
+          form {
+            .left {
+
+              textarea {
+                width: 250px;
+                height: 150px;
+
+              }
+
+            }
+            .right {
+                .formInput {
+                  input {
+                    width: 270px;
+                  }
+                
+                }
+      
+                
+              }
+    
+          } 
+         
+          }
+        }
+      }
+  }

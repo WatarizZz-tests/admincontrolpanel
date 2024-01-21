@@ -1,52 +1,47 @@
 import "./navbar.scss";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
-import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
-import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
-import { useContext } from "react";
+import {  useState,useContext } from "react";
+
 
 const Navbar = () => {
+
   const { dispatch } = useContext(DarkModeContext);
+  const [darkmode,setDarkMode]= useState(false);
+  
+  const ModeChanger =  () => {
+    setDarkMode(!darkmode);
+    dispatch({ type: "TOGGLE" })
+
+  };
 
   return (
+    
     <div className="navbar">
       <div className="wrapper">
         <div className="search">
-          <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon />
+        Plateforme d'assistant medical
         </div>
         <div className="items">
+
           <div className="item">
             <LanguageOutlinedIcon className="icon" />
-            English
+            Français
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon
+            {!darkmode ?  <DarkModeOutlinedIcon
               className="icon"
-              onClick={() => dispatch({ type: "TOGGLE" })}
-            />
+              onClick={() => ModeChanger()}
+            /> : <LightModeIcon className="icon"
+            onClick={() => ModeChanger()} /> }
+           
           </div>
-          <div className="item">
-            <FullscreenExitOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
-            <div className="counter">1</div>
-          </div>
-          <div className="item">
-            <ChatBubbleOutlineOutlinedIcon className="icon" />
-            <div className="counter">2</div>
-          </div>
-          <div className="item">
-            <ListOutlinedIcon className="icon" />
-          </div>
+
           <div className="item">
             <img
-              src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="avatar"
             />
@@ -54,6 +49,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+   
+
   );
 };
 

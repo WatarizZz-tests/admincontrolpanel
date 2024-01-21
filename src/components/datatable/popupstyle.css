@@ -1,0 +1,45 @@
+.viewButton1 {
+    padding: 2px 5px !important;
+    border-radius: 5px !important;
+    color: darkblue !important; 
+    border: 1px dotted rgba(0, 0, 139, 0.596) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease-out !important;
+    margin: 1rem 0 !important;
+    padding: 0.5rem !important;
+  }
+  .viewButton1:hover {
+    background: darkblue !important;
+    color: white !important;
+  }
+
+  .modal {
+    position: relative !important;
+  
+  padding: 2rem !important;
+  border: 0 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 0 0.5rem 0.25rem hsl(0 0% 0% / 10%) !important;
+  }
+  h4 {
+    margin: 0.3rem 0;
+    color: rgb(148, 130, 130);
+  }
+  h3 {
+    margin-bottom: 0.3rem;
+  }
+  .content {
+    display: flex !important;
+    justify-content:space-around;
+    align-items: center;
+  }
+  .content1 {
+    display: flex !important;
+    justify-content:space-around;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .closeit {
+    justify-content: space-around;
+    align-items: center;
+  }

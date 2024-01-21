@@ -52,6 +52,18 @@
           font-size: 18px;
           color: #7451f8;
         }
+        button {
+          padding: 2px 5px;
+          border-style: none;
+          display: flex;
+          align-items: center;
+        }
+        button:hover {
+          border: black;
+          background-color: #f2e2e2;
+          color: white;
+          cursor: pointer;
+        }
 
         span{
             font-size: 13px;
@@ -88,3 +100,178 @@
       }
   }
 }
+
+@media screen and (max-width: 1040px) {
+  .sidebar {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 50px;
+    
+  
+    .top {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+  
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #6439ff;
+      }
+    }
+  
+    hr {
+      display: none;
+      height: 0;
+      border: 0.5px solid rgb(230, 227, 227);
+    }
+  
+    .center {
+      margin-right: -40% !important;
+      padding-left: 10px;
+      height: 50px;
+      align-items: center;
+  
+      ul {
+        
+        height: 100%;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+  
+        
+  
+        li {
+          margin: 0.7rem 0;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+  
+        }
+      }
+    }
+  
+    .bottom{
+       
+        height: 50px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+    }
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+  .sidebar {
+    
+    .center {
+      margin-right: -15% !important;
+      
+  
+      
+    }
+  
+    
+  }
+  
+}
+
+
+@media screen and (max-width: 650px) {
+  .sidebar {
+    
+    .center {
+      margin-right: -5% !important;
+      
+  
+      
+    }
+  
+    
+  }
+  
+}
+
+
+
+
+
+
+@media screen and (max-width: 395px) {
+  .sidebar {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 50px;
+    flex-wrap: wrap;
+    
+  
+    .top {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+  
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #6439ff;
+      }
+    }
+  
+    hr {
+      display: none;
+      height: 0;
+      border: 0.5px solid rgb(230, 227, 227);
+    }
+  
+    .center {
+      margin-right: 0 !important;
+      padding-left: 10px;
+      height: 30px;
+      align-items: center;
+  
+      ul {
+        
+        height: 100%;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+  
+        
+  
+        li {
+          margin: 0.1rem 0;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+  
+        }
+      }
+    }
+  
+    .bottom{
+        
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+
+    }
+  }
+  
+}
+
+

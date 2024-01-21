@@ -20,21 +20,15 @@
       padding: 5px;
       border-radius: 5px;
       cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    .link:hover {
+      color: white;
+      background-color: green;
     }
   }
 
-  .cellWithImg {
-    display: flex;
-    align-items: center;
-
-    .cellImg {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 20px;
-    }
-  }
+  
 
   .cellWithStatus {
     padding: 5px;
@@ -58,13 +52,22 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    
+    
 
     .viewButton {
-      padding: 2px 5px;
-      border-radius: 5px;
-      color: darkblue;
-      border: 1px dotted rgba(0, 0, 139, 0.596);
-      cursor: pointer;
+      padding: 2px 5px !important;
+      border-radius: 5px !important;
+      color: darkblue !important; 
+      border: 1px dotted rgba(0, 0, 139, 0.596) !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease-out !important;
+      display: flex;
+      flex-direction: column;
+    }
+    .viewButton:hover {
+      background: darkblue !important;
+      color: white !important;
     }
     
     .deleteButton {
@@ -73,6 +76,95 @@
       color: crimson;
       border: 1px dotted rgba(220, 20, 60, 0.6);
       cursor: pointer;
+      transition: all 0.3s ease-out !important;
+    }
+    .statusButton {
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: rgb(97, 187, 37);
+      border: 1px dotted rgb(127, 253, 43);
+      cursor: pointer;
+      transition: all 0.3s ease-out !important;
+    }
+    .deleteButton:hover {
+      background: crimson !important;
+      color: white !important;
+    }
+
+    .statusButton:hover {
+      background: rgb(97, 187, 37) !important;
+      color: white !important;
+    }
+    .endButton {
+      padding: 2px 5px;
+      border-radius: 5px;
+      color: rgb(255, 255, 255);
+      background-color: crimson;
+      border: 1px dotted rgb(29, 29, 29);
+      cursor: pointer;
+      transition: all 0.3s ease-out !important;
+
+    }
+    .endButton:hover {
+      background: rgb(33, 33, 33) !important;
+      color: white !important;
     }
   }
+  .actifclassgreen {
+    color:green;
+  }
+  .termineclassred{
+    color:red;
+  }
+}
+
+
+@media screen and (max-width: 1040px) {
+
+  .datatable {
+    height: 700px;
+    padding: 20px;
+    
+    
+    
+    
+    .datatableTitle{
+      width: 100%;
+      font-size: 24px;
+      color: gray;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .link{
+        text-decoration: none;
+        color: green;
+        font-size: 16px;
+        font-weight: 400;
+        border: 1px solid green;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+      }
+      .link:hover {
+        color: white;
+        background-color: green;
+      }
+    }
+  
+  
+    .cellAction {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      
+      
+      
+    }
+   
+  }
+  
+    
 }
